@@ -120,3 +120,43 @@ C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\tr\System.ServiceModel.Primit
 C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\zh-Hans\System.ServiceModel.Primitives.resources.dll
 C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\zh-Hant\System.ServiceModel.Primitives.resources.dll
 C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\Connected Services\Service1\ConnectedService.json
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.WsTrust.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.Saml.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Xml.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\System.Private.ServiceModel.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\System.ServiceModel.Duplex.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\System.ServiceModel.Federation.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\System.ServiceModel.NetTcp.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\System.ServiceModel.Security.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\cs\System.Private.ServiceModel.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\de\System.Private.ServiceModel.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\es\System.Private.ServiceModel.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\fr\System.Private.ServiceModel.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\it\System.Private.ServiceModel.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\ja\System.Private.ServiceModel.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\ko\System.Private.ServiceModel.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\pl\System.Private.ServiceModel.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\pt-BR\System.Private.ServiceModel.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\ru\System.Private.ServiceModel.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\tr\System.Private.ServiceModel.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\zh-Hans\System.Private.ServiceModel.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\zh-Hant\System.Private.ServiceModel.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\cs\System.ServiceModel.Federation.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\de\System.ServiceModel.Federation.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\es\System.ServiceModel.Federation.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\fr\System.ServiceModel.Federation.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\it\System.ServiceModel.Federation.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\ja\System.ServiceModel.Federation.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\ko\System.ServiceModel.Federation.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\pl\System.ServiceModel.Federation.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\pt-BR\System.ServiceModel.Federation.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\ru\System.ServiceModel.Federation.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\tr\System.ServiceModel.Federation.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\zh-Hans\System.ServiceModel.Federation.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\zh-Hant\System.ServiceModel.Federation.resources.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\Connected Services\Msacco_Applications\ConnectedService.json
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\Connected Services\Transaction_list\ConnectedService.json
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

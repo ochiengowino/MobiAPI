@@ -5,6 +5,9 @@ using System.Net;
 using System.Net.Http;
 using MobiAPI.Context;
 using MobiAPI.Models;
+using Msacco_Applications;
+using System.Web.Services;
+using System.Web.Services.Protocols;
 
 namespace MobiAPI.Controllers
 {
@@ -17,6 +20,8 @@ namespace MobiAPI.Controllers
 
         public ApiTransactionsController(ApiContext context)
         {
+            MsaccoMobiAPI msaccoMobiAPI = new MsaccoMobiAPI();
+           
             _context = context;
         }
 
@@ -39,7 +44,6 @@ namespace MobiAPI.Controllers
 
                 return new JsonResult(Ok(successState));
             }
-
             else
             {
                 var failureState = new
@@ -54,12 +58,17 @@ namespace MobiAPI.Controllers
 
         // GET Endpoint
         [HttpGet]
-        public JsonResult Get(int id) 
-        { 
-            var result = _context.CustomerTransactions.Find(id);
+        public IActionResult Get(int id) 
+        {
+
+            // var result = _context.CustomerTransactions.Find(id);
+            MsaccoMobiAPI client = new MsaccoMobiAPI();
+         
+
+            var result = client.Find(id);
 
             // Error/Failure - 400
-            if(result == null)
+            if (result == null)
             {
                 return new JsonResult(NotFound());
             }
@@ -72,6 +81,7 @@ namespace MobiAPI.Controllers
         [HttpGet("/GetAll")]
         public JsonResult GetAll()
         {
+             
             var result = _context.CustomerTransactions.ToList();
 
             return new JsonResult(Ok(result));
