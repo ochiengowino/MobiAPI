@@ -1,18 +1,21 @@
 {
   "ExtendedData": {
     "inputs": [
-      "http://ochiengowino:3332/CapitalSaccoInstance/WS/CAPITAL%20SACCO/Page/APITransactions"
+      "http://OchiengOwino:3332/CapitalSaccoInstance/WS/CAPITAL%20SACCO/Page/LoanApplicationList"
     ],
     "collectionTypes": [
       "System.Array",
       "System.Collections.Generic.Dictionary`2"
     ],
     "namespaceMappings": [
-      "*, Transaction_list"
+      "*, ServiceReference3"
     ],
     "references": [
       "Azure.Core, {Azure.Core, 1.24.0}",
       "Azure.Identity, {Azure.Identity, 1.6.0}",
+      "Microsoft.AspNetCore.Cryptography.Internal, {Microsoft.AspNetCore.Cryptography.Internal, 6.0.25}",
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation, {Microsoft.AspNetCore.Cryptography.KeyDerivation, 6.0.25}",
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore, {Microsoft.AspNetCore.Identity.EntityFrameworkCore, 6.0.25}",
       "Microsoft.Bcl.AsyncInterfaces, {Microsoft.Bcl.AsyncInterfaces, 5.0.0}",
       "Microsoft.Data.SqlClient, {Microsoft.Data.SqlClient, 5.0.1}",
       "Microsoft.EntityFrameworkCore, {Microsoft.EntityFrameworkCore, 7.0.0}",
@@ -25,6 +28,8 @@
       "Microsoft.Extensions.DependencyInjection, {Microsoft.Extensions.DependencyInjection, 7.0.0}",
       "Microsoft.Extensions.DependencyInjection.Abstractions, {Microsoft.Extensions.DependencyInjection.Abstractions, 7.0.0}",
       "Microsoft.Extensions.Http, {Microsoft.Extensions.Http, 7.0.0}",
+      "Microsoft.Extensions.Identity.Core, {Microsoft.Extensions.Identity.Core, 6.0.25}",
+      "Microsoft.Extensions.Identity.Stores, {Microsoft.Extensions.Identity.Stores, 6.0.25}",
       "Microsoft.Extensions.Logging, {Microsoft.Extensions.Logging, 7.0.0}",
       "Microsoft.Extensions.Logging.Abstractions, {Microsoft.Extensions.Logging.Abstractions, 7.0.0}",
       "Microsoft.Extensions.ObjectPool, {Microsoft.Extensions.ObjectPool, 6.0.16}",
@@ -44,6 +49,8 @@
       "Microsoft.Net.Http.Headers, {Microsoft.Net.Http.Headers, 2.1.14}",
       "Microsoft.OpenApi, {Microsoft.OpenApi, 1.2.3}",
       "Microsoft.SqlServer.Server, {Microsoft.SqlServer.Server, 1.0.0}",
+      "Newtonsoft.Json, {Newtonsoft.Json, 13.0.1}",
+      "Newtonsoft.Json.Bson, {Newtonsoft.Json.Bson, 1.0.2}",
       "Swashbuckle.AspNetCore.Swagger, {Swashbuckle.AspNetCore.Swagger, 6.5.0}",
       "Swashbuckle.AspNetCore.SwaggerGen, {Swashbuckle.AspNetCore.SwaggerGen, 6.5.0}",
       "Swashbuckle.AspNetCore.SwaggerUI, {Swashbuckle.AspNetCore.SwaggerUI, 6.5.0}",
@@ -56,6 +63,7 @@
       "System.Memory.Data, {System.Memory.Data, 1.0.2}",
       "System.Net.Http, {System.Net.Http, 4.3.4}",
       "System.Net.Http.Extensions, {Microsoft.Net.Http, 2.2.29}",
+      "System.Net.Http.Formatting, {Microsoft.AspNet.WebApi.Client, 6.0.0}",
       "System.Net.Http.Primitives, {Microsoft.Net.Http, 2.2.29}",
       "System.Net.Primitives, {System.Net.Primitives, 4.3.0}",
       "System.Reflection, {System.Reflection, 4.3.0}",
@@ -85,6 +93,7 @@
       "System.Text.Encodings.Web, {System.Text.Encodings.Web, 7.0.0}",
       "System.Text.Json, {System.Text.Json, 7.0.0}",
       "System.Threading.Tasks, {System.Threading.Tasks, 4.3.0}",
+      "System.Web.Services.Description, {System.Web.Services.Description, 6.2.0}",
       "System.Xml.ReaderWriter, {System.Xml.ReaderWriter, 4.3.0}",
       "System.Xml.XmlDocument, {System.Xml.XmlDocument, 4.3.0}"
     ],

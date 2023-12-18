@@ -7,8 +7,9 @@
       "System.Array",
       "System.Collections.Generic.Dictionary`2"
     ],
+    "messageContract": true,
     "namespaceMappings": [
-      "*, Msacco_Applications"
+      "*, ServiceReference2"
     ],
     "targetFramework": "net6.0",
     "typeReuseMode": "All"

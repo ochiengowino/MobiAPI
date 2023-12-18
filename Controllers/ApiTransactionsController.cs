@@ -1,13 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Crm.Sdk;
+using Microsoft.Crm.Sdk.Messages;
+using System;
 using System.Net;
-
-//using System.Net.Http.Formatting;
 using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+//using System.Net.Http.Formatting;
 using MobiAPI.Context;
 using MobiAPI.Models;
-using Msacco_Applications;
+using System.Web;
 using System.Web.Services;
 using System.Web.Services.Protocols;
+//using ServiceReference1;
+using ServiceReference2;
+using ServiceReference3;
 
 namespace MobiAPI.Controllers
 {
@@ -20,8 +28,8 @@ namespace MobiAPI.Controllers
 
         public ApiTransactionsController(ApiContext context)
         {
-            MsaccoMobiAPI msaccoMobiAPI = new MsaccoMobiAPI();
-           
+            //MsaccoMobiAPI msaccoMobiAPI = new MsaccoMobiAPI();
+            
             _context = context;
         }
 
@@ -58,23 +66,28 @@ namespace MobiAPI.Controllers
 
         // GET Endpoint
         [HttpGet]
-        public IActionResult Get(int id) 
+        public IActionResult Get() 
         {
-
+            
             // var result = _context.CustomerTransactions.Find(id);
-            MsaccoMobiAPI client = new MsaccoMobiAPI();
-         
 
-            var result = client.Find(id);
+            //MsaccoMobiAPI result = new MsaccoMobiAPI();
+            LoanApplicationList webService = new LoanApplicationList();
+           /* NetworkCredential cred = new NetworkCredential(Globals.WebServiceUsername, Globals.WebServicePassword, Globals.WebServiceDomain);
+            webService.Timeout = Globals.Timeout;
+            webService.Url = Globals.Url;
+            webService.UseDefaultCredentials = false; // <-----
+            webService.Credentials = cred;*/
 
             // Error/Failure - 400
-            if (result == null)
+            if (webService == null)
             {
                 return new JsonResult(NotFound());
             }
+            webService.Application_Date = DateTime.Parse("11/29/2021");
 
             // Ok/Success - 200
-            return new JsonResult(Ok(result));
+            return new JsonResult(Ok(webService));
         }
 
         // Fetch All

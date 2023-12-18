@@ -7,54 +7,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Msacco_Applications
+namespace ServiceReference1
 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="urn:microsoft-dynamics-schemas/page/msaccomobiapi", ConfigurationName="Msacco_Applications.MsaccoMobiAPI_Port")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="urn:microsoft-dynamics-schemas/page/msaccomobiapi", ConfigurationName="ServiceReference1.MsaccoMobiAPI_Port")]
     public interface MsaccoMobiAPI_Port
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/msaccomobiapi:Read", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<Msacco_Applications.Read_Result> ReadAsync(Msacco_Applications.Read request);
+        System.Threading.Tasks.Task<ServiceReference1.Read_Result> ReadAsync(ServiceReference1.Read request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/msaccomobiapi:ReadByRecId", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<Msacco_Applications.ReadByRecId_Result> ReadByRecIdAsync(Msacco_Applications.ReadByRecId request);
+        System.Threading.Tasks.Task<ServiceReference1.ReadByRecId_Result> ReadByRecIdAsync(ServiceReference1.ReadByRecId request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/msaccomobiapi:ReadMultiple", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<Msacco_Applications.ReadMultiple_Result> ReadMultipleAsync(Msacco_Applications.ReadMultiple request);
+        System.Threading.Tasks.Task<ServiceReference1.ReadMultiple_Result> ReadMultipleAsync(ServiceReference1.ReadMultiple request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/msaccomobiapi:IsUpdated", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<Msacco_Applications.IsUpdated_Result> IsUpdatedAsync(Msacco_Applications.IsUpdated request);
+        System.Threading.Tasks.Task<ServiceReference1.IsUpdated_Result> IsUpdatedAsync(ServiceReference1.IsUpdated request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/msaccomobiapi:GetRecIdFromKey", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<Msacco_Applications.GetRecIdFromKey_Result> GetRecIdFromKeyAsync(Msacco_Applications.GetRecIdFromKey request);
+        System.Threading.Tasks.Task<ServiceReference1.GetRecIdFromKey_Result> GetRecIdFromKeyAsync(ServiceReference1.GetRecIdFromKey request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/msaccomobiapi:Create", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<Msacco_Applications.Create_Result> CreateAsync(Msacco_Applications.Create request);
+        System.Threading.Tasks.Task<ServiceReference1.Create_Result> CreateAsync(ServiceReference1.Create request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/msaccomobiapi:CreateMultiple", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<Msacco_Applications.CreateMultiple_Result> CreateMultipleAsync(Msacco_Applications.CreateMultiple request);
+        System.Threading.Tasks.Task<ServiceReference1.CreateMultiple_Result> CreateMultipleAsync(ServiceReference1.CreateMultiple request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/msaccomobiapi:Update", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<Msacco_Applications.Update_Result> UpdateAsync(Msacco_Applications.Update request);
+        System.Threading.Tasks.Task<ServiceReference1.Update_Result> UpdateAsync(ServiceReference1.Update request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/msaccomobiapi:UpdateMultiple", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Threading.Tasks.Task<Msacco_Applications.UpdateMultiple_Result> UpdateMultipleAsync(Msacco_Applications.UpdateMultiple request);
+        System.Threading.Tasks.Task<ServiceReference1.UpdateMultiple_Result> UpdateMultipleAsync(ServiceReference1.UpdateMultiple request);
     }
     
     /// <remarks/>
@@ -527,21 +527,6 @@ namespace Msacco_Applications
                 this.billable_AmountFieldSpecified = value;
             }
         }
-
-        internal object Find(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal Task GetCustomer_NameAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal object GetOrderDataAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
     }
     
     /// <remarks/>
@@ -748,13 +733,13 @@ namespace Msacco_Applications
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/msaccomobiapi", Order=0)]
-        public Msacco_Applications.MsaccoMobiAPI MsaccoMobiAPI;
+        public ServiceReference1.MsaccoMobiAPI MsaccoMobiAPI;
         
         public Read_Result()
         {
         }
         
-        public Read_Result(Msacco_Applications.MsaccoMobiAPI MsaccoMobiAPI)
+        public Read_Result(ServiceReference1.MsaccoMobiAPI MsaccoMobiAPI)
         {
             this.MsaccoMobiAPI = MsaccoMobiAPI;
         }
@@ -788,13 +773,13 @@ namespace Msacco_Applications
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/msaccomobiapi", Order=0)]
-        public Msacco_Applications.MsaccoMobiAPI MsaccoMobiAPI;
+        public ServiceReference1.MsaccoMobiAPI MsaccoMobiAPI;
         
         public ReadByRecId_Result()
         {
         }
         
-        public ReadByRecId_Result(Msacco_Applications.MsaccoMobiAPI MsaccoMobiAPI)
+        public ReadByRecId_Result(ServiceReference1.MsaccoMobiAPI MsaccoMobiAPI)
         {
             this.MsaccoMobiAPI = MsaccoMobiAPI;
         }
@@ -809,7 +794,7 @@ namespace Msacco_Applications
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/msaccomobiapi", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("filter")]
-        public Msacco_Applications.MsaccoMobiAPI_Filter[] filter;
+        public ServiceReference1.MsaccoMobiAPI_Filter[] filter;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/msaccomobiapi", Order=1)]
         public string bookmarkKey;
@@ -821,7 +806,7 @@ namespace Msacco_Applications
         {
         }
         
-        public ReadMultiple(Msacco_Applications.MsaccoMobiAPI_Filter[] filter, string bookmarkKey, int setSize)
+        public ReadMultiple(ServiceReference1.MsaccoMobiAPI_Filter[] filter, string bookmarkKey, int setSize)
         {
             this.filter = filter;
             this.bookmarkKey = bookmarkKey;
@@ -838,13 +823,13 @@ namespace Msacco_Applications
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ReadMultiple_Result", Namespace="urn:microsoft-dynamics-schemas/page/msaccomobiapi", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public Msacco_Applications.MsaccoMobiAPI[] ReadMultiple_Result1;
+        public ServiceReference1.MsaccoMobiAPI[] ReadMultiple_Result1;
         
         public ReadMultiple_Result()
         {
         }
         
-        public ReadMultiple_Result(Msacco_Applications.MsaccoMobiAPI[] ReadMultiple_Result1)
+        public ReadMultiple_Result(ServiceReference1.MsaccoMobiAPI[] ReadMultiple_Result1)
         {
             this.ReadMultiple_Result1 = ReadMultiple_Result1;
         }
@@ -937,13 +922,13 @@ namespace Msacco_Applications
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/msaccomobiapi", Order=0)]
-        public Msacco_Applications.MsaccoMobiAPI MsaccoMobiAPI;
+        public ServiceReference1.MsaccoMobiAPI MsaccoMobiAPI;
         
         public Create()
         {
         }
         
-        public Create(Msacco_Applications.MsaccoMobiAPI MsaccoMobiAPI)
+        public Create(ServiceReference1.MsaccoMobiAPI MsaccoMobiAPI)
         {
             this.MsaccoMobiAPI = MsaccoMobiAPI;
         }
@@ -956,13 +941,13 @@ namespace Msacco_Applications
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/msaccomobiapi", Order=0)]
-        public Msacco_Applications.MsaccoMobiAPI MsaccoMobiAPI;
+        public ServiceReference1.MsaccoMobiAPI MsaccoMobiAPI;
         
         public Create_Result()
         {
         }
         
-        public Create_Result(Msacco_Applications.MsaccoMobiAPI MsaccoMobiAPI)
+        public Create_Result(ServiceReference1.MsaccoMobiAPI MsaccoMobiAPI)
         {
             this.MsaccoMobiAPI = MsaccoMobiAPI;
         }
@@ -976,13 +961,13 @@ namespace Msacco_Applications
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/msaccomobiapi", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public Msacco_Applications.MsaccoMobiAPI[] MsaccoMobiAPI_List;
+        public ServiceReference1.MsaccoMobiAPI[] MsaccoMobiAPI_List;
         
         public CreateMultiple()
         {
         }
         
-        public CreateMultiple(Msacco_Applications.MsaccoMobiAPI[] MsaccoMobiAPI_List)
+        public CreateMultiple(ServiceReference1.MsaccoMobiAPI[] MsaccoMobiAPI_List)
         {
             this.MsaccoMobiAPI_List = MsaccoMobiAPI_List;
         }
@@ -996,13 +981,13 @@ namespace Msacco_Applications
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/msaccomobiapi", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public Msacco_Applications.MsaccoMobiAPI[] MsaccoMobiAPI_List;
+        public ServiceReference1.MsaccoMobiAPI[] MsaccoMobiAPI_List;
         
         public CreateMultiple_Result()
         {
         }
         
-        public CreateMultiple_Result(Msacco_Applications.MsaccoMobiAPI[] MsaccoMobiAPI_List)
+        public CreateMultiple_Result(ServiceReference1.MsaccoMobiAPI[] MsaccoMobiAPI_List)
         {
             this.MsaccoMobiAPI_List = MsaccoMobiAPI_List;
         }
@@ -1015,13 +1000,13 @@ namespace Msacco_Applications
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/msaccomobiapi", Order=0)]
-        public Msacco_Applications.MsaccoMobiAPI MsaccoMobiAPI;
+        public ServiceReference1.MsaccoMobiAPI MsaccoMobiAPI;
         
         public Update()
         {
         }
         
-        public Update(Msacco_Applications.MsaccoMobiAPI MsaccoMobiAPI)
+        public Update(ServiceReference1.MsaccoMobiAPI MsaccoMobiAPI)
         {
             this.MsaccoMobiAPI = MsaccoMobiAPI;
         }
@@ -1034,13 +1019,13 @@ namespace Msacco_Applications
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/msaccomobiapi", Order=0)]
-        public Msacco_Applications.MsaccoMobiAPI MsaccoMobiAPI;
+        public ServiceReference1.MsaccoMobiAPI MsaccoMobiAPI;
         
         public Update_Result()
         {
         }
         
-        public Update_Result(Msacco_Applications.MsaccoMobiAPI MsaccoMobiAPI)
+        public Update_Result(ServiceReference1.MsaccoMobiAPI MsaccoMobiAPI)
         {
             this.MsaccoMobiAPI = MsaccoMobiAPI;
         }
@@ -1054,13 +1039,13 @@ namespace Msacco_Applications
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/msaccomobiapi", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public Msacco_Applications.MsaccoMobiAPI[] MsaccoMobiAPI_List;
+        public ServiceReference1.MsaccoMobiAPI[] MsaccoMobiAPI_List;
         
         public UpdateMultiple()
         {
         }
         
-        public UpdateMultiple(Msacco_Applications.MsaccoMobiAPI[] MsaccoMobiAPI_List)
+        public UpdateMultiple(ServiceReference1.MsaccoMobiAPI[] MsaccoMobiAPI_List)
         {
             this.MsaccoMobiAPI_List = MsaccoMobiAPI_List;
         }
@@ -1074,26 +1059,26 @@ namespace Msacco_Applications
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/msaccomobiapi", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public Msacco_Applications.MsaccoMobiAPI[] MsaccoMobiAPI_List;
+        public ServiceReference1.MsaccoMobiAPI[] MsaccoMobiAPI_List;
         
         public UpdateMultiple_Result()
         {
         }
         
-        public UpdateMultiple_Result(Msacco_Applications.MsaccoMobiAPI[] MsaccoMobiAPI_List)
+        public UpdateMultiple_Result(ServiceReference1.MsaccoMobiAPI[] MsaccoMobiAPI_List)
         {
             this.MsaccoMobiAPI_List = MsaccoMobiAPI_List;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    public interface MsaccoMobiAPI_PortChannel : Msacco_Applications.MsaccoMobiAPI_Port, System.ServiceModel.IClientChannel
+    public interface MsaccoMobiAPI_PortChannel : ServiceReference1.MsaccoMobiAPI_Port, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    public partial class MsaccoMobiAPI_PortClient : System.ServiceModel.ClientBase<Msacco_Applications.MsaccoMobiAPI_Port>, Msacco_Applications.MsaccoMobiAPI_Port
+    public partial class MsaccoMobiAPI_PortClient : System.ServiceModel.ClientBase<ServiceReference1.MsaccoMobiAPI_Port>, ServiceReference1.MsaccoMobiAPI_Port
     {
         
         /// <summary>
@@ -1137,88 +1122,88 @@ namespace Msacco_Applications
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Msacco_Applications.Read_Result> Msacco_Applications.MsaccoMobiAPI_Port.ReadAsync(Msacco_Applications.Read request)
+        System.Threading.Tasks.Task<ServiceReference1.Read_Result> ServiceReference1.MsaccoMobiAPI_Port.ReadAsync(ServiceReference1.Read request)
         {
             return base.Channel.ReadAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Msacco_Applications.Read_Result> ReadAsync(string No)
+        public System.Threading.Tasks.Task<ServiceReference1.Read_Result> ReadAsync(string No)
         {
-            Msacco_Applications.Read inValue = new Msacco_Applications.Read();
+            ServiceReference1.Read inValue = new ServiceReference1.Read();
             inValue.No = No;
-            return ((Msacco_Applications.MsaccoMobiAPI_Port)(this)).ReadAsync(inValue);
+            return ((ServiceReference1.MsaccoMobiAPI_Port)(this)).ReadAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Msacco_Applications.ReadByRecId_Result> Msacco_Applications.MsaccoMobiAPI_Port.ReadByRecIdAsync(Msacco_Applications.ReadByRecId request)
+        System.Threading.Tasks.Task<ServiceReference1.ReadByRecId_Result> ServiceReference1.MsaccoMobiAPI_Port.ReadByRecIdAsync(ServiceReference1.ReadByRecId request)
         {
             return base.Channel.ReadByRecIdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Msacco_Applications.ReadByRecId_Result> ReadByRecIdAsync(string recId)
+        public System.Threading.Tasks.Task<ServiceReference1.ReadByRecId_Result> ReadByRecIdAsync(string recId)
         {
-            Msacco_Applications.ReadByRecId inValue = new Msacco_Applications.ReadByRecId();
+            ServiceReference1.ReadByRecId inValue = new ServiceReference1.ReadByRecId();
             inValue.recId = recId;
-            return ((Msacco_Applications.MsaccoMobiAPI_Port)(this)).ReadByRecIdAsync(inValue);
+            return ((ServiceReference1.MsaccoMobiAPI_Port)(this)).ReadByRecIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Msacco_Applications.ReadMultiple_Result> Msacco_Applications.MsaccoMobiAPI_Port.ReadMultipleAsync(Msacco_Applications.ReadMultiple request)
+        System.Threading.Tasks.Task<ServiceReference1.ReadMultiple_Result> ServiceReference1.MsaccoMobiAPI_Port.ReadMultipleAsync(ServiceReference1.ReadMultiple request)
         {
             return base.Channel.ReadMultipleAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Msacco_Applications.ReadMultiple_Result> ReadMultipleAsync(Msacco_Applications.MsaccoMobiAPI_Filter[] filter, string bookmarkKey, int setSize)
+        public System.Threading.Tasks.Task<ServiceReference1.ReadMultiple_Result> ReadMultipleAsync(ServiceReference1.MsaccoMobiAPI_Filter[] filter, string bookmarkKey, int setSize)
         {
-            Msacco_Applications.ReadMultiple inValue = new Msacco_Applications.ReadMultiple();
+            ServiceReference1.ReadMultiple inValue = new ServiceReference1.ReadMultiple();
             inValue.filter = filter;
             inValue.bookmarkKey = bookmarkKey;
             inValue.setSize = setSize;
-            return ((Msacco_Applications.MsaccoMobiAPI_Port)(this)).ReadMultipleAsync(inValue);
+            return ((ServiceReference1.MsaccoMobiAPI_Port)(this)).ReadMultipleAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Msacco_Applications.IsUpdated_Result> Msacco_Applications.MsaccoMobiAPI_Port.IsUpdatedAsync(Msacco_Applications.IsUpdated request)
+        System.Threading.Tasks.Task<ServiceReference1.IsUpdated_Result> ServiceReference1.MsaccoMobiAPI_Port.IsUpdatedAsync(ServiceReference1.IsUpdated request)
         {
             return base.Channel.IsUpdatedAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Msacco_Applications.IsUpdated_Result> IsUpdatedAsync(string Key)
+        public System.Threading.Tasks.Task<ServiceReference1.IsUpdated_Result> IsUpdatedAsync(string Key)
         {
-            Msacco_Applications.IsUpdated inValue = new Msacco_Applications.IsUpdated();
+            ServiceReference1.IsUpdated inValue = new ServiceReference1.IsUpdated();
             inValue.Key = Key;
-            return ((Msacco_Applications.MsaccoMobiAPI_Port)(this)).IsUpdatedAsync(inValue);
+            return ((ServiceReference1.MsaccoMobiAPI_Port)(this)).IsUpdatedAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Msacco_Applications.GetRecIdFromKey_Result> Msacco_Applications.MsaccoMobiAPI_Port.GetRecIdFromKeyAsync(Msacco_Applications.GetRecIdFromKey request)
+        System.Threading.Tasks.Task<ServiceReference1.GetRecIdFromKey_Result> ServiceReference1.MsaccoMobiAPI_Port.GetRecIdFromKeyAsync(ServiceReference1.GetRecIdFromKey request)
         {
             return base.Channel.GetRecIdFromKeyAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Msacco_Applications.GetRecIdFromKey_Result> GetRecIdFromKeyAsync(string Key)
+        public System.Threading.Tasks.Task<ServiceReference1.GetRecIdFromKey_Result> GetRecIdFromKeyAsync(string Key)
         {
-            Msacco_Applications.GetRecIdFromKey inValue = new Msacco_Applications.GetRecIdFromKey();
+            ServiceReference1.GetRecIdFromKey inValue = new ServiceReference1.GetRecIdFromKey();
             inValue.Key = Key;
-            return ((Msacco_Applications.MsaccoMobiAPI_Port)(this)).GetRecIdFromKeyAsync(inValue);
+            return ((ServiceReference1.MsaccoMobiAPI_Port)(this)).GetRecIdFromKeyAsync(inValue);
         }
         
-        public System.Threading.Tasks.Task<Msacco_Applications.Create_Result> CreateAsync(Msacco_Applications.Create request)
+        public System.Threading.Tasks.Task<ServiceReference1.Create_Result> CreateAsync(ServiceReference1.Create request)
         {
             return base.Channel.CreateAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Msacco_Applications.CreateMultiple_Result> CreateMultipleAsync(Msacco_Applications.CreateMultiple request)
+        public System.Threading.Tasks.Task<ServiceReference1.CreateMultiple_Result> CreateMultipleAsync(ServiceReference1.CreateMultiple request)
         {
             return base.Channel.CreateMultipleAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Msacco_Applications.Update_Result> UpdateAsync(Msacco_Applications.Update request)
+        public System.Threading.Tasks.Task<ServiceReference1.Update_Result> UpdateAsync(ServiceReference1.Update request)
         {
             return base.Channel.UpdateAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Msacco_Applications.UpdateMultiple_Result> UpdateMultipleAsync(Msacco_Applications.UpdateMultiple request)
+        public System.Threading.Tasks.Task<ServiceReference1.UpdateMultiple_Result> UpdateMultipleAsync(ServiceReference1.UpdateMultiple request)
         {
             return base.Channel.UpdateMultipleAsync(request);
         }
