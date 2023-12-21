@@ -9,7 +9,10 @@ builder.Services.AddDbContext<MobiAPI.Context.ApiContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-
+builder.Services.AddDbContext<MobiAPI.Context.NavContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 // Add services to the container.
 
 builder.Services.AddControllers()

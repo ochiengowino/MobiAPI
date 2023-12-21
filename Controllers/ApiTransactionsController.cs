@@ -29,13 +29,14 @@ namespace MobiAPI.Controllers
     public class ApiTransactionsController : ControllerBase
     {
         private readonly ApiContext _context;
+        private readonly NavContext _navcontext;
         private readonly HttpClient _httpClient;
 
-        public ApiTransactionsController()
+        public ApiTransactionsController(ApiContext context, NavContext navcontext)
         {
-            //MsaccoMobiAPI msaccoMobiAPI = new MsaccoMobiAPI();
-            
-            //_context = context;
+
+            _navcontext = navcontext;
+            _context = context;
 
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = new Uri("http://OchiengOwino:3332/CapitalSaccoInstance/");
@@ -49,6 +50,8 @@ namespace MobiAPI.Controllers
             // _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", base64Credentials);
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", base64Credentials);
         }
+
+     
 
         public class LoanApplication
         {
@@ -178,13 +181,38 @@ namespace MobiAPI.Controllers
             }
         }
 
-        [HttpPost]
-        public IActionResult PostNavData(LoanApplication loanApplication)
+        [HttpGet]
+        public async Task<IActionResult> GetandStoreNavData(NavTransactions navTransactions)
         {
 
-            var data = loanApplication;
-            return Ok(data);
-            
+            try
+            {
+
+                HttpResponseMessage response = await _httpClient.GetAsync("http://OchiengOwino:3333/CapitalSaccoInstance/ODataV4/Company('CAPITAL%20SACCO')/LoanApplicationList");
+                if (response.IsSuccessStatusCode)
+                {
+                    string result = await response.Content.ReadAsStringAsync();
+
+                    LoanApplication loanApplication = JsonConvert.DeserializeObject<LoanApplication>(result);
+                    return Ok(loanApplication);
+                }
+                else
+                {
+                    var failureState = new
+                    {
+                        MessageCode = "404",
+                        Message = "No data received"
+                    };
+
+                    return new JsonResult(NotFound(failureState));
+                  
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Exception: {ex.Message}");
+            }
+
         }
 
     }

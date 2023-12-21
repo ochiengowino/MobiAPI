@@ -5,8 +5,10 @@ namespace MobiAPI.Context
 {
     public class ApiContext: DbContext 
     {
-
+        
         public DbSet<Transactions>CustomerTransactions { get; set; }
+        //public DbSet<NavTransactions>TransactonsNav { get; set; }
         public ApiContext(DbContextOptions<ApiContext> options) : base(options) { }
+     
     }
 }
