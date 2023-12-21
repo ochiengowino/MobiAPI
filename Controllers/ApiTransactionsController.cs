@@ -32,11 +32,12 @@ namespace MobiAPI.Controllers
         private readonly NavContext _navcontext;
         private readonly HttpClient _httpClient;
 
-        public ApiTransactionsController(ApiContext context, NavContext navcontext)
+        public ApiTransactionsController(NavContext navcontext)
+          //public ApiTransactionsController(ApiContext context, NavContext navcontext)
         {
 
             _navcontext = navcontext;
-            _context = context;
+           // _context = context;
 
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = new Uri("http://OchiengOwino:3332/CapitalSaccoInstance/");
