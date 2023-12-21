@@ -20,6 +20,7 @@ using System.Threading.Tasks;
 //using ServiceReference1;
 using ServiceReference2;
 using ServiceReference3;
+using System.Text.Json.Nodes;
 
 namespace MobiAPI.Controllers
 {
@@ -183,19 +184,52 @@ namespace MobiAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetandStoreNavData(NavTransactions navTransactions)
+       // public async Task<IActionResult> GetandStoreNavData(NavTransactions navTransactions)
+        public async Task<IActionResult> GetandStoreNavData()
         {
 
             try
             {
 
                 HttpResponseMessage response = await _httpClient.GetAsync("http://OchiengOwino:3333/CapitalSaccoInstance/ODataV4/Company('CAPITAL%20SACCO')/LoanApplicationList");
-                if (response.IsSuccessStatusCode)
-                {
+              /*  if (response.IsSuccessStatusCode)
+                {*/
                     string result = await response.Content.ReadAsStringAsync();
 
                     LoanApplication loanApplication = JsonConvert.DeserializeObject<LoanApplication>(result);
-                    return Ok(loanApplication);
+                    //return Ok(loanApplication);
+                    if (loanApplication != null && loanApplication.Value != null && loanApplication.Value.Any())
+                    {
+                        // Extract specific entries and save to the database
+                        foreach (var entry in loanApplication.Value)
+                        {
+                            // Assuming mapping between JSON fields and Entry model properties
+                            var newEntry = new NavTransactions
+                            {
+                                //Id = entry.Id,
+                                Loan_No = entry.Loan_No,
+                                Application_Date = entry.Application_Date,
+                                Loan_Product_Type = entry.Loan_Product_Type,
+                                Loan_Product_Type_Name = entry.Loan_Product_Type_Name,
+                                Member_No = entry.Member_No,
+                                Member_Name = entry.Member_Name,
+                                Requested_Amount = entry.Requested_Amount,
+                                Approved_Amount = entry.Approved_Amount,
+                                Interest = entry.Interest,
+                                Status = entry.Status,
+                                RecID = entry.RecID,
+                                Captured_By = entry.Captured_By,
+                                Global_Dimension_1_Code = entry.Global_Dimension_1_Code,
+                                Global_Dimension_2_Code = entry.Global_Dimension_2_Code,
+                                Staff_No = entry.Staff_No
+                            };
+
+                            _navcontext.NavTransactions.Add(newEntry);
+                        }
+
+                        _context.SaveChanges();
+                        return Ok("Entries saved successfully.");
+                    //}
                 }
                 else
                 {
