@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Net;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Crm.Sdk;
 using Microsoft.Crm.Sdk.Messages;
-using System;
-using System.Net;
+
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -12,19 +13,21 @@ using Newtonsoft.Json;
 //using System.Net.Http.Formatting;
 using MobiAPI.Context;
 using MobiAPI.Models;
-
+using System.ServiceModel;
 using System.Web;
 using System.Web.Services;
 using System.Web.Services.Protocols;
 using System.Threading.Tasks;
-//using ServiceReference1;
-using ServiceReference2;
-//using ServiceReference3;
-using ServiceReference4;
+
+//using ServiceReference5;
 using System.Text.Json.Nodes;
 using System.Text;
 using System.Xml.Serialization;
-
+using System.ServiceModel.Description;
+using Microsoft.AspNetCore.Connections;
+using System.Security.Policy;
+using Azure.Core;
+using ServiceReference8;
 namespace MobiAPI.Controllers
 {
     [Route("api/[controller]/[action]")]
@@ -35,29 +38,35 @@ namespace MobiAPI.Controllers
         private readonly ApiContext _context;
         private readonly NavContext _navcontext;
         private readonly HttpClient _httpClient;
+        private readonly ServiceReference5.LoanApplicationList _navClient;
+        private readonly ServiceReference8.LoanApplicationList _client;
+        private readonly ServiceReference8.LoanApplicationList_Port _ws;
        // private readonly IHttpClientFactory _clientFactory; // HttpClient factory for making HTTP requests
 
-        public ApiTransactionsController(NavContext navcontext )
+        public ApiTransactionsController(NavContext navcontext)
         //public ApiTransactionsController(ApiContext context, NavContext navcontext, IHttpClientFactory clientFactory)
         {
-
             _navcontext = navcontext;
+            _client = new ServiceReference8.LoanApplicationList();
             // _context = context;
             //_clientFactory = clientFactory;
 
+            _navClient = new ServiceReference5.LoanApplicationList();
+            //_ws = new ServiceReference8.LoanApplicationList_Port();
+            // _httpClient = httpClient;
+            
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("http://OchiengOwino:3332/CapitalSaccoInstance/");
+            _httpClient.BaseAddress = new Uri("http://OchiengOwino:3333/CapitalSaccoInstance/");
             _httpClient.DefaultRequestHeaders.Accept.Clear();
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            _httpClient.Timeout = TimeSpan.FromMinutes(5);
 
             string username = "ochiengowinoben";
             string password = "D3271n3d4gr87n322";
             string base64Credentials = Convert.ToBase64String(Encoding.ASCII.GetBytes($"{username}:{password}"));
-            
+
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", base64Credentials);
         }
-
-     
 
         public class LoanApplication
         {
@@ -120,23 +129,61 @@ namespace MobiAPI.Controllers
         public IActionResult Get() 
         {
             // var result = _context.CustomerTransactions.Find(id);
-
+            
             //MsaccoMobiAPI result = new MsaccoMobiAPI();
-            LoanApplicationList webService = new LoanApplicationList();
-          /*  webService.ClientCredentials.UserName.UserName = "";
-            webService.ClientCredentials.UserName.Password = "";*/
+           
+            var webService = new ServiceReference5.LoanApplicationList_Fields();
+             var list = new ServiceReference5.LoanApplicationList();
+            ServiceReference5.Status status = new ServiceReference5.Status();
+            ServiceReference5.LoanApplicationList loanApplicationList = new ServiceReference5.LoanApplicationList();  
+            ServiceReference5.ReadMultiple readMultiple = new ServiceReference5.ReadMultiple();
+            Uri uri = new Uri("http://ochiengowino:3332/CapitalSaccoInstance/WS/CAPITAL%20SACCO/Page/LoanApplicationList");
+
+            //webService.UseDefaultCredentials = true;
+           
+            var navClient  = new LoanApplicationList();
+            NetworkCredential nc = new NetworkCredential("ochiengowinoben", "D3271n3d4gr87n322");
+            ClientCredentials cred = new ClientCredentials();
+            ServiceReference5.LoanApplicationList ws = new ServiceReference5.LoanApplicationList();
+            var name = ws.Member_Name;
+            ServiceReference5.Read rd = new ServiceReference5.Read(name);
+           string _wsURL = "http://ochiengowino:3332/CapitalSaccoInstance/WS/CAPITAL%20SACCO/Page/LoanApplicationList";
+            //Create an instance of the D365BC SOAP WS
+            BasicHttpBinding _binding = new BasicHttpBinding();
+            //Set https usage
+            _binding.Security.Mode = BasicHttpSecurityMode.Transport;
+            _binding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
+            using (LoanApplicationList_PortClient _wws = new LoanApplicationList_PortClient(_binding, new EndpointAddress(_wsURL)))
+            {
+                _wws.ClientCredentials.UserName.UserName = "ochiengowinoben";
+                _wws.ClientCredentials.UserName.Password = "D3271n3d4gr87n322";
+            }
+           // LoanApplicationList_PortClient _wws = new LoanApplicationList_PortClient();
+            
+
+            List<LoanApplicationList_Filter> _filters = new List<LoanApplicationList_Filter>();
+            ServiceReference7.LocationList ls = new ServiceReference7.LocationList();
+
+           
+            return Ok(ls);
+            
+            /*               
+            webService.Credentials = "";
+            webService.UseDefaultCredentials = true;*/
+            /*  webService.ClientCredentials.UserName.UserName = "";
+              webService.ClientCredentials.UserName.Password = "";*/
 
             // Error/Failure - 400
-            if (webService == null)
+           /* if (webService == null)
             {
                 return new JsonResult(NotFound());
-            }
+            }*/
    
             //webService.Application_Date = DateTime.Parse("11/29/2021");
            
 
             // Ok/Success - 200
-            return new JsonResult(Ok(webService));
+            //return new JsonResult(Ok(webService));
         }
 
         // Fetch All
@@ -264,16 +311,19 @@ namespace MobiAPI.Controllers
                 {
                     // Prepare data in the required format for Navision web service
                     //var navisionData = PrepareDataForNavision(entries);
-                   // var navisionData = JsonConvert.SerializeObject(entries);
+                    var navisionData1 = JsonConvert.SerializeObject(entries);
                     // Convert the data to XML format
                     var navisionData = SerializeToXml(entries);
                     // Make a POST request to the Navision web service
                     var navisionApiUrl = "http://OchiengOwino:3333/CapitalSaccoInstance/ODataV4/Company('CAPITAL%20SACCO')/LoanApplicationList"; // Replace with actual Navision API endpoint
                    // _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/xml"));
-                    var content = new StringContent(navisionData);
-                    
+                    var content = new StringContent(navisionData1, Encoding.UTF8, "application/json");
+
+                   
+
                     HttpResponseMessage response = await _httpClient.PostAsync(navisionApiUrl, content);
                     //var response = await client.PostAsync(navisionApiUrl, content);
+                    string data = await content.ReadAsStringAsync();
                     return Ok(response);
                    /* if (response.IsSuccessStatusCode)
                     {
@@ -318,21 +368,21 @@ namespace MobiAPI.Controllers
                 {
                     var navisionItems = new
                     {
-                        Loan_No = item.Loan_No,
-                        Application_Date = item.Application_Date,
-                        Loan_Product_Type = item.Loan_Product_Type,
-                        Loan_Product_Type_Name = item.Loan_Product_Type_Name,
-                        Member_No = item.Member_No,
-                        Member_Name = item.Member_Name,
-                        Requested_Amount = item.Requested_Amount,
-                        Approved_Amount = item.Approved_Amount,
-                        Interest = item.Interest,
-                        Status = item.Status,
-                        RecID = item.RecID,
-                        Captured_By = item.Captured_By,
-                        Global_Dimension_1_Code = item.Global_Dimension_1_Code,
-                        Global_Dimension_2_Code = item.Global_Dimension_2_Code,
-                        Staff_No = item.Staff_No
+                        loan_No = item.Loan_No,
+                        application_Date = item.Application_Date,
+                        loan_Product_Type = item.Loan_Product_Type,
+                        loan_Product_Type_Name = item.Loan_Product_Type_Name,
+                        member_No = item.Member_No,
+                        member_Name = item.Member_Name,
+                        requested_Amount = item.Requested_Amount,
+                        approved_Amount = item.Approved_Amount,
+                        interest = item.Interest,
+                        status = item.Status,
+                        recID = item.RecID,
+                        captured_By = item.Captured_By,
+                        global_Dimension_1_Code = item.Global_Dimension_1_Code,
+                        global_Dimension_2_Code = item.Global_Dimension_2_Code,
+                        staff_No = item.Staff_No
                       
                     };
                     navisionData.Add(navisionItems);
@@ -340,38 +390,64 @@ namespace MobiAPI.Controllers
                 
                 
                 var jsonNavisionData = JsonConvert.SerializeObject(navisionData);
-               //var navisionData2 = SerializeToXml(jsonNavisionData);
-                var content = new StringContent(jsonNavisionData, Encoding.UTF8, "application/json");
+               var navisionData2 = SerializeToXml(jsonNavisionData);
+                var content = new StringContent(navisionData2, Encoding.UTF32, "text/xml");
 
+
+                //var apiUrl = "https://your-navision-api-url";
+                var accessToken = "z2/ieggOtbywPL/0u/5Mu/SYqHRpPT8Lb7jGMYlAaTU=";
+                //var client = _clientFactory.CreateClient();
+
+                 /*_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+                 _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));*/
+
+
+                 //var client = new HttpClient();
+                var client = new HttpRequestMessage(HttpMethod.Post, "http://OchiengOwino:3333/CapitalSaccoInstance/ODataV4/Company('CAPITAL%20SACCO')/LoanApplicationList");
                 
-                var client = new HttpClient();
-                client.BaseAddress = new Uri("http://OchiengOwino:3332/CapitalSaccoInstance/");
+                // client.Headers.Authorization = new AuthenticationHeaderValue("Bearer", "z2/ieggOtbywPL/0u/5Mu/SYqHRpPT8Lb7jGMYlAaTU=");
+                client.Content = new StringContent(navisionData2, Encoding.UTF32, "text/xml");
+               /* client.BaseAddress = new Uri("http://OchiengOwino:3333/CapitalSaccoInstance/");
                 client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("text/xml"));*/
 
                 string username = "ochiengowinoben";
                 string password = "D3271n3d4gr87n322";
                 string base64Credentials = Convert.ToBase64String(Encoding.ASCII.GetBytes($"{username}:{password}"));
 
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", base64Credentials);
+                client.Headers.Authorization = new AuthenticationHeaderValue("Basic", base64Credentials);
 
 
-                var response = await client.PostAsync("http://OchiengOwino:3333/CapitalSaccoInstance/ODataV4/Company('CAPITAL%20SACCO')/LoanApplicationList", content); 
-                return Ok(response);
-               /* if (response.IsSuccessStatusCode)
-                {
-                    return Ok("Data successfully posted to Navision");
-                }
-                else
-                {
-                    return BadRequest("Failed to post data to Navision");
-                }*/
+                //HttpResponseMessage response = await _httpClient.SendAsync(client);
+                string data = await content.ReadAsStringAsync();
+                // response.EnsureSuccessStatusCode();
+                return Ok(data);
+                                                       
+              
+                /* if (response.IsSuccessStatusCode)
+                 {
+                     return Ok("Data successfully posted to Navision");
+                 }
+                 else
+                 {
+                     return BadRequest("Failed to post data to Navision");
+                 }*/
             }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetDataFromNavisionWebService()
+        {
+            HttpClient httpClient = new HttpClient();
+            //httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("APIKEY", header);
+            var data = await httpClient.GetAsync("http://OchiengOwino:3333/CapitalSaccoInstance/ODataV4/Company('CAPITAL%20SACCO')/LoanApplicationList").Result.Content.ReadAsStringAsync();
+            return Ok(data);
+        }
+
         // Method to prepare data for Navision in the required format
         private string PrepareDataForNavision(List<NavTransactions> entries)
         {

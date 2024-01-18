@@ -7,77 +7,86 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ServiceReference5
+namespace ServiceReference8
 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", ConfigurationName="ServiceReference5.LoanApplicationList_Port")]
-    internal interface LoanApplicationList_Port
+    [System.ServiceModel.ServiceContractAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", ConfigurationName="ServiceReference8.LoanApplicationList_Port")]
+    public interface LoanApplicationList_Port
     {
         
+        // CODEGEN: Generating message contract since the wrapper name (Read_Result) of message Read_Result does not match the default value (Read)
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:Read", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        ServiceReference5.Read_Result Read(ServiceReference5.Read request);
+        ServiceReference8.Read_Result Read(ServiceReference8.Read request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:Read", ReplyAction="*")]
-        System.Threading.Tasks.Task<ServiceReference5.Read_Result> ReadAsync(ServiceReference5.Read request);
+        System.Threading.Tasks.Task<ServiceReference8.Read_Result> ReadAsync(ServiceReference8.Read request);
         
+        // CODEGEN: Generating message contract since the wrapper name (ReadByRecId_Result) of message ReadByRecId_Result does not match the default value (ReadByRecId)
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:ReadByRecId", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        ServiceReference5.ReadByRecId_Result ReadByRecId(ServiceReference5.ReadByRecId request);
+        ServiceReference8.ReadByRecId_Result ReadByRecId(ServiceReference8.ReadByRecId request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:ReadByRecId", ReplyAction="*")]
-        System.Threading.Tasks.Task<ServiceReference5.ReadByRecId_Result> ReadByRecIdAsync(ServiceReference5.ReadByRecId request);
+        System.Threading.Tasks.Task<ServiceReference8.ReadByRecId_Result> ReadByRecIdAsync(ServiceReference8.ReadByRecId request);
         
+        // CODEGEN: Generating message contract since the wrapper name (ReadMultiple_Result) of message ReadMultiple_Result does not match the default value (ReadMultiple)
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:ReadMultiple", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        ServiceReference5.ReadMultiple_Result ReadMultiple(ServiceReference5.ReadMultiple request);
+        ServiceReference8.ReadMultiple_Result ReadMultiple(ServiceReference8.ReadMultiple request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:ReadMultiple", ReplyAction="*")]
-        System.Threading.Tasks.Task<ServiceReference5.ReadMultiple_Result> ReadMultipleAsync(ServiceReference5.ReadMultiple request);
+        System.Threading.Tasks.Task<ServiceReference8.ReadMultiple_Result> ReadMultipleAsync(ServiceReference8.ReadMultiple request);
         
+        // CODEGEN: Generating message contract since the wrapper name (IsUpdated_Result) of message IsUpdated_Result does not match the default value (IsUpdated)
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:IsUpdated", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        ServiceReference5.IsUpdated_Result IsUpdated(ServiceReference5.IsUpdated request);
+        ServiceReference8.IsUpdated_Result IsUpdated(ServiceReference8.IsUpdated request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:IsUpdated", ReplyAction="*")]
-        System.Threading.Tasks.Task<ServiceReference5.IsUpdated_Result> IsUpdatedAsync(ServiceReference5.IsUpdated request);
+        System.Threading.Tasks.Task<ServiceReference8.IsUpdated_Result> IsUpdatedAsync(ServiceReference8.IsUpdated request);
         
+        // CODEGEN: Generating message contract since the wrapper name (GetRecIdFromKey_Result) of message GetRecIdFromKey_Result does not match the default value (GetRecIdFromKey)
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:GetRecIdFromKey", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        ServiceReference5.GetRecIdFromKey_Result GetRecIdFromKey(ServiceReference5.GetRecIdFromKey request);
+        ServiceReference8.GetRecIdFromKey_Result GetRecIdFromKey(ServiceReference8.GetRecIdFromKey request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:GetRecIdFromKey", ReplyAction="*")]
-        System.Threading.Tasks.Task<ServiceReference5.GetRecIdFromKey_Result> GetRecIdFromKeyAsync(ServiceReference5.GetRecIdFromKey request);
+        System.Threading.Tasks.Task<ServiceReference8.GetRecIdFromKey_Result> GetRecIdFromKeyAsync(ServiceReference8.GetRecIdFromKey request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:Create", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        ServiceReference5.Create_Result Create(ServiceReference5.Create request);
+        ServiceReference8.Create_Result Create(ServiceReference8.Create request);
         
+        // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:Create", ReplyAction="*")]
-        System.Threading.Tasks.Task<ServiceReference5.Create_Result> CreateAsync(ServiceReference5.Create request);
+        System.Threading.Tasks.Task<ServiceReference8.Create_Result> CreateAsync(ServiceReference8.Create request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:CreateMultiple", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        ServiceReference5.CreateMultiple_Result CreateMultiple(ServiceReference5.CreateMultiple request);
+        ServiceReference8.CreateMultiple_Result CreateMultiple(ServiceReference8.CreateMultiple request);
         
+        // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:CreateMultiple", ReplyAction="*")]
-        System.Threading.Tasks.Task<ServiceReference5.CreateMultiple_Result> CreateMultipleAsync(ServiceReference5.CreateMultiple request);
+        System.Threading.Tasks.Task<ServiceReference8.CreateMultiple_Result> CreateMultipleAsync(ServiceReference8.CreateMultiple request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:Update", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        ServiceReference5.Update_Result Update(ServiceReference5.Update request);
+        ServiceReference8.Update_Result Update(ServiceReference8.Update request);
         
+        // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:Update", ReplyAction="*")]
-        System.Threading.Tasks.Task<ServiceReference5.Update_Result> UpdateAsync(ServiceReference5.Update request);
+        System.Threading.Tasks.Task<ServiceReference8.Update_Result> UpdateAsync(ServiceReference8.Update request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:UpdateMultiple", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        ServiceReference5.UpdateMultiple_Result UpdateMultiple(ServiceReference5.UpdateMultiple request);
+        ServiceReference8.UpdateMultiple_Result UpdateMultiple(ServiceReference8.UpdateMultiple request);
         
+        // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/loanapplicationlist:UpdateMultiple", ReplyAction="*")]
-        System.Threading.Tasks.Task<ServiceReference5.UpdateMultiple_Result> UpdateMultipleAsync(ServiceReference5.UpdateMultiple request);
+        System.Threading.Tasks.Task<ServiceReference8.UpdateMultiple_Result> UpdateMultipleAsync(ServiceReference8.UpdateMultiple request);
     }
     
     /// <remarks/>
@@ -540,8 +549,9 @@ namespace ServiceReference5
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="Read", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class Read
+    public partial class Read
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
@@ -559,18 +569,19 @@ namespace ServiceReference5
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="Read_Result", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class Read_Result
+    public partial class Read_Result
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
-        public ServiceReference5.LoanApplicationList LoanApplicationList;
+        public ServiceReference8.LoanApplicationList LoanApplicationList;
         
         public Read_Result()
         {
         }
         
-        public Read_Result(ServiceReference5.LoanApplicationList LoanApplicationList)
+        public Read_Result(ServiceReference8.LoanApplicationList LoanApplicationList)
         {
             this.LoanApplicationList = LoanApplicationList;
         }
@@ -578,8 +589,9 @@ namespace ServiceReference5
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ReadByRecId", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class ReadByRecId
+    public partial class ReadByRecId
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
@@ -597,18 +609,19 @@ namespace ServiceReference5
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ReadByRecId_Result", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class ReadByRecId_Result
+    public partial class ReadByRecId_Result
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
-        public ServiceReference5.LoanApplicationList LoanApplicationList;
+        public ServiceReference8.LoanApplicationList LoanApplicationList;
         
         public ReadByRecId_Result()
         {
         }
         
-        public ReadByRecId_Result(ServiceReference5.LoanApplicationList LoanApplicationList)
+        public ReadByRecId_Result(ServiceReference8.LoanApplicationList LoanApplicationList)
         {
             this.LoanApplicationList = LoanApplicationList;
         }
@@ -616,13 +629,14 @@ namespace ServiceReference5
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ReadMultiple", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class ReadMultiple
+    public partial class ReadMultiple
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("filter")]
-        public ServiceReference5.LoanApplicationList_Filter[] filter;
+        public ServiceReference8.LoanApplicationList_Filter[] filter;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=1)]
         public string bookmarkKey;
@@ -634,7 +648,7 @@ namespace ServiceReference5
         {
         }
         
-        public ReadMultiple(ServiceReference5.LoanApplicationList_Filter[] filter, string bookmarkKey, int setSize)
+        public ReadMultiple(ServiceReference8.LoanApplicationList_Filter[] filter, string bookmarkKey, int setSize)
         {
             this.filter = filter;
             this.bookmarkKey = bookmarkKey;
@@ -644,19 +658,20 @@ namespace ServiceReference5
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="ReadMultiple_Result", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class ReadMultiple_Result
+    public partial class ReadMultiple_Result
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ReadMultiple_Result", Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public ServiceReference5.LoanApplicationList[] ReadMultiple_Result1;
+        public ServiceReference8.LoanApplicationList[] ReadMultiple_Result1;
         
         public ReadMultiple_Result()
         {
         }
         
-        public ReadMultiple_Result(ServiceReference5.LoanApplicationList[] ReadMultiple_Result1)
+        public ReadMultiple_Result(ServiceReference8.LoanApplicationList[] ReadMultiple_Result1)
         {
             this.ReadMultiple_Result1 = ReadMultiple_Result1;
         }
@@ -664,8 +679,9 @@ namespace ServiceReference5
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="IsUpdated", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class IsUpdated
+    public partial class IsUpdated
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
@@ -683,8 +699,9 @@ namespace ServiceReference5
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="IsUpdated_Result", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class IsUpdated_Result
+    public partial class IsUpdated_Result
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="IsUpdated_Result", Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
@@ -702,8 +719,9 @@ namespace ServiceReference5
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="GetRecIdFromKey", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class GetRecIdFromKey
+    public partial class GetRecIdFromKey
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
@@ -721,8 +739,9 @@ namespace ServiceReference5
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="GetRecIdFromKey_Result", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class GetRecIdFromKey_Result
+    public partial class GetRecIdFromKey_Result
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRecIdFromKey_Result", Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
@@ -741,17 +760,17 @@ namespace ServiceReference5
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="Create", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class Create
+    public partial class Create
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
-        public ServiceReference5.LoanApplicationList LoanApplicationList;
+        public ServiceReference8.LoanApplicationList LoanApplicationList;
         
         public Create()
         {
         }
         
-        public Create(ServiceReference5.LoanApplicationList LoanApplicationList)
+        public Create(ServiceReference8.LoanApplicationList LoanApplicationList)
         {
             this.LoanApplicationList = LoanApplicationList;
         }
@@ -760,17 +779,17 @@ namespace ServiceReference5
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="Create_Result", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class Create_Result
+    public partial class Create_Result
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
-        public ServiceReference5.LoanApplicationList LoanApplicationList;
+        public ServiceReference8.LoanApplicationList LoanApplicationList;
         
         public Create_Result()
         {
         }
         
-        public Create_Result(ServiceReference5.LoanApplicationList LoanApplicationList)
+        public Create_Result(ServiceReference8.LoanApplicationList LoanApplicationList)
         {
             this.LoanApplicationList = LoanApplicationList;
         }
@@ -779,18 +798,18 @@ namespace ServiceReference5
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="CreateMultiple", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class CreateMultiple
+    public partial class CreateMultiple
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public ServiceReference5.LoanApplicationList[] LoanApplicationList_List;
+        public ServiceReference8.LoanApplicationList[] LoanApplicationList_List;
         
         public CreateMultiple()
         {
         }
         
-        public CreateMultiple(ServiceReference5.LoanApplicationList[] LoanApplicationList_List)
+        public CreateMultiple(ServiceReference8.LoanApplicationList[] LoanApplicationList_List)
         {
             this.LoanApplicationList_List = LoanApplicationList_List;
         }
@@ -799,18 +818,18 @@ namespace ServiceReference5
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="CreateMultiple_Result", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class CreateMultiple_Result
+    public partial class CreateMultiple_Result
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public ServiceReference5.LoanApplicationList[] LoanApplicationList_List;
+        public ServiceReference8.LoanApplicationList[] LoanApplicationList_List;
         
         public CreateMultiple_Result()
         {
         }
         
-        public CreateMultiple_Result(ServiceReference5.LoanApplicationList[] LoanApplicationList_List)
+        public CreateMultiple_Result(ServiceReference8.LoanApplicationList[] LoanApplicationList_List)
         {
             this.LoanApplicationList_List = LoanApplicationList_List;
         }
@@ -819,17 +838,17 @@ namespace ServiceReference5
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="Update", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class Update
+    public partial class Update
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
-        public ServiceReference5.LoanApplicationList LoanApplicationList;
+        public ServiceReference8.LoanApplicationList LoanApplicationList;
         
         public Update()
         {
         }
         
-        public Update(ServiceReference5.LoanApplicationList LoanApplicationList)
+        public Update(ServiceReference8.LoanApplicationList LoanApplicationList)
         {
             this.LoanApplicationList = LoanApplicationList;
         }
@@ -838,17 +857,17 @@ namespace ServiceReference5
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="Update_Result", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class Update_Result
+    public partial class Update_Result
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
-        public ServiceReference5.LoanApplicationList LoanApplicationList;
+        public ServiceReference8.LoanApplicationList LoanApplicationList;
         
         public Update_Result()
         {
         }
         
-        public Update_Result(ServiceReference5.LoanApplicationList LoanApplicationList)
+        public Update_Result(ServiceReference8.LoanApplicationList LoanApplicationList)
         {
             this.LoanApplicationList = LoanApplicationList;
         }
@@ -857,18 +876,18 @@ namespace ServiceReference5
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="UpdateMultiple", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class UpdateMultiple
+    public partial class UpdateMultiple
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public ServiceReference5.LoanApplicationList[] LoanApplicationList_List;
+        public ServiceReference8.LoanApplicationList[] LoanApplicationList_List;
         
         public UpdateMultiple()
         {
         }
         
-        public UpdateMultiple(ServiceReference5.LoanApplicationList[] LoanApplicationList_List)
+        public UpdateMultiple(ServiceReference8.LoanApplicationList[] LoanApplicationList_List)
         {
             this.LoanApplicationList_List = LoanApplicationList_List;
         }
@@ -877,31 +896,31 @@ namespace ServiceReference5
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ServiceModel.MessageContractAttribute(WrapperName="UpdateMultiple_Result", WrapperNamespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", IsWrapped=true)]
-    internal partial class UpdateMultiple_Result
+    public partial class UpdateMultiple_Result
     {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/loanapplicationlist", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public ServiceReference5.LoanApplicationList[] LoanApplicationList_List;
+        public ServiceReference8.LoanApplicationList[] LoanApplicationList_List;
         
         public UpdateMultiple_Result()
         {
         }
         
-        public UpdateMultiple_Result(ServiceReference5.LoanApplicationList[] LoanApplicationList_List)
+        public UpdateMultiple_Result(ServiceReference8.LoanApplicationList[] LoanApplicationList_List)
         {
             this.LoanApplicationList_List = LoanApplicationList_List;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    internal interface LoanApplicationList_PortChannel : ServiceReference5.LoanApplicationList_Port, System.ServiceModel.IClientChannel
+    public interface LoanApplicationList_PortChannel : ServiceReference8.LoanApplicationList_Port, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
-    internal partial class LoanApplicationList_PortClient : System.ServiceModel.ClientBase<ServiceReference5.LoanApplicationList_Port>, ServiceReference5.LoanApplicationList_Port
+    public partial class LoanApplicationList_PortClient : System.ServiceModel.ClientBase<ServiceReference8.LoanApplicationList_Port>, ServiceReference8.LoanApplicationList_Port
     {
         
         /// <summary>
@@ -944,92 +963,217 @@ namespace ServiceReference5
         {
         }
         
-        public ServiceReference5.Read_Result Read(ServiceReference5.Read request)
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiceReference8.Read_Result ServiceReference8.LoanApplicationList_Port.Read(ServiceReference8.Read request)
         {
             return base.Channel.Read(request);
         }
         
-        public System.Threading.Tasks.Task<ServiceReference5.Read_Result> ReadAsync(ServiceReference5.Read request)
+        public ServiceReference8.LoanApplicationList Read(string Loan_No)
+        {
+            ServiceReference8.Read inValue = new ServiceReference8.Read();
+            inValue.Loan_No = Loan_No;
+            ServiceReference8.Read_Result retVal = ((ServiceReference8.LoanApplicationList_Port)(this)).Read(inValue);
+            return retVal.LoanApplicationList;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiceReference8.Read_Result> ServiceReference8.LoanApplicationList_Port.ReadAsync(ServiceReference8.Read request)
         {
             return base.Channel.ReadAsync(request);
         }
         
-        public ServiceReference5.ReadByRecId_Result ReadByRecId(ServiceReference5.ReadByRecId request)
+        public System.Threading.Tasks.Task<ServiceReference8.Read_Result> ReadAsync(string Loan_No)
+        {
+            ServiceReference8.Read inValue = new ServiceReference8.Read();
+            inValue.Loan_No = Loan_No;
+            return ((ServiceReference8.LoanApplicationList_Port)(this)).ReadAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiceReference8.ReadByRecId_Result ServiceReference8.LoanApplicationList_Port.ReadByRecId(ServiceReference8.ReadByRecId request)
         {
             return base.Channel.ReadByRecId(request);
         }
         
-        public System.Threading.Tasks.Task<ServiceReference5.ReadByRecId_Result> ReadByRecIdAsync(ServiceReference5.ReadByRecId request)
+        public ServiceReference8.LoanApplicationList ReadByRecId(string recId)
+        {
+            ServiceReference8.ReadByRecId inValue = new ServiceReference8.ReadByRecId();
+            inValue.recId = recId;
+            ServiceReference8.ReadByRecId_Result retVal = ((ServiceReference8.LoanApplicationList_Port)(this)).ReadByRecId(inValue);
+            return retVal.LoanApplicationList;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiceReference8.ReadByRecId_Result> ServiceReference8.LoanApplicationList_Port.ReadByRecIdAsync(ServiceReference8.ReadByRecId request)
         {
             return base.Channel.ReadByRecIdAsync(request);
         }
         
-        public ServiceReference5.ReadMultiple_Result ReadMultiple(ServiceReference5.ReadMultiple request)
+        public System.Threading.Tasks.Task<ServiceReference8.ReadByRecId_Result> ReadByRecIdAsync(string recId)
+        {
+            ServiceReference8.ReadByRecId inValue = new ServiceReference8.ReadByRecId();
+            inValue.recId = recId;
+            return ((ServiceReference8.LoanApplicationList_Port)(this)).ReadByRecIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiceReference8.ReadMultiple_Result ServiceReference8.LoanApplicationList_Port.ReadMultiple(ServiceReference8.ReadMultiple request)
         {
             return base.Channel.ReadMultiple(request);
         }
         
-        public System.Threading.Tasks.Task<ServiceReference5.ReadMultiple_Result> ReadMultipleAsync(ServiceReference5.ReadMultiple request)
+        public ServiceReference8.LoanApplicationList[] ReadMultiple(ServiceReference8.LoanApplicationList_Filter[] filter, string bookmarkKey, int setSize)
+        {
+            ServiceReference8.ReadMultiple inValue = new ServiceReference8.ReadMultiple();
+            inValue.filter = filter;
+            inValue.bookmarkKey = bookmarkKey;
+            inValue.setSize = setSize;
+            ServiceReference8.ReadMultiple_Result retVal = ((ServiceReference8.LoanApplicationList_Port)(this)).ReadMultiple(inValue);
+            return retVal.ReadMultiple_Result1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiceReference8.ReadMultiple_Result> ServiceReference8.LoanApplicationList_Port.ReadMultipleAsync(ServiceReference8.ReadMultiple request)
         {
             return base.Channel.ReadMultipleAsync(request);
         }
         
-        public ServiceReference5.IsUpdated_Result IsUpdated(ServiceReference5.IsUpdated request)
+        public System.Threading.Tasks.Task<ServiceReference8.ReadMultiple_Result> ReadMultipleAsync(ServiceReference8.LoanApplicationList_Filter[] filter, string bookmarkKey, int setSize)
+        {
+            ServiceReference8.ReadMultiple inValue = new ServiceReference8.ReadMultiple();
+            inValue.filter = filter;
+            inValue.bookmarkKey = bookmarkKey;
+            inValue.setSize = setSize;
+            return ((ServiceReference8.LoanApplicationList_Port)(this)).ReadMultipleAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiceReference8.IsUpdated_Result ServiceReference8.LoanApplicationList_Port.IsUpdated(ServiceReference8.IsUpdated request)
         {
             return base.Channel.IsUpdated(request);
         }
         
-        public System.Threading.Tasks.Task<ServiceReference5.IsUpdated_Result> IsUpdatedAsync(ServiceReference5.IsUpdated request)
+        public bool IsUpdated(string Key)
+        {
+            ServiceReference8.IsUpdated inValue = new ServiceReference8.IsUpdated();
+            inValue.Key = Key;
+            ServiceReference8.IsUpdated_Result retVal = ((ServiceReference8.LoanApplicationList_Port)(this)).IsUpdated(inValue);
+            return retVal.IsUpdated_Result1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiceReference8.IsUpdated_Result> ServiceReference8.LoanApplicationList_Port.IsUpdatedAsync(ServiceReference8.IsUpdated request)
         {
             return base.Channel.IsUpdatedAsync(request);
         }
         
-        public ServiceReference5.GetRecIdFromKey_Result GetRecIdFromKey(ServiceReference5.GetRecIdFromKey request)
+        public System.Threading.Tasks.Task<ServiceReference8.IsUpdated_Result> IsUpdatedAsync(string Key)
+        {
+            ServiceReference8.IsUpdated inValue = new ServiceReference8.IsUpdated();
+            inValue.Key = Key;
+            return ((ServiceReference8.LoanApplicationList_Port)(this)).IsUpdatedAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiceReference8.GetRecIdFromKey_Result ServiceReference8.LoanApplicationList_Port.GetRecIdFromKey(ServiceReference8.GetRecIdFromKey request)
         {
             return base.Channel.GetRecIdFromKey(request);
         }
         
-        public System.Threading.Tasks.Task<ServiceReference5.GetRecIdFromKey_Result> GetRecIdFromKeyAsync(ServiceReference5.GetRecIdFromKey request)
+        public string GetRecIdFromKey(string Key)
+        {
+            ServiceReference8.GetRecIdFromKey inValue = new ServiceReference8.GetRecIdFromKey();
+            inValue.Key = Key;
+            ServiceReference8.GetRecIdFromKey_Result retVal = ((ServiceReference8.LoanApplicationList_Port)(this)).GetRecIdFromKey(inValue);
+            return retVal.GetRecIdFromKey_Result1;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiceReference8.GetRecIdFromKey_Result> ServiceReference8.LoanApplicationList_Port.GetRecIdFromKeyAsync(ServiceReference8.GetRecIdFromKey request)
         {
             return base.Channel.GetRecIdFromKeyAsync(request);
         }
         
-        public ServiceReference5.Create_Result Create(ServiceReference5.Create request)
+        public System.Threading.Tasks.Task<ServiceReference8.GetRecIdFromKey_Result> GetRecIdFromKeyAsync(string Key)
+        {
+            ServiceReference8.GetRecIdFromKey inValue = new ServiceReference8.GetRecIdFromKey();
+            inValue.Key = Key;
+            return ((ServiceReference8.LoanApplicationList_Port)(this)).GetRecIdFromKeyAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiceReference8.Create_Result ServiceReference8.LoanApplicationList_Port.Create(ServiceReference8.Create request)
         {
             return base.Channel.Create(request);
         }
         
-        public System.Threading.Tasks.Task<ServiceReference5.Create_Result> CreateAsync(ServiceReference5.Create request)
+        public void Create(ref ServiceReference8.LoanApplicationList LoanApplicationList)
+        {
+            ServiceReference8.Create inValue = new ServiceReference8.Create();
+            inValue.LoanApplicationList = LoanApplicationList;
+            ServiceReference8.Create_Result retVal = ((ServiceReference8.LoanApplicationList_Port)(this)).Create(inValue);
+            LoanApplicationList = retVal.LoanApplicationList;
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference8.Create_Result> CreateAsync(ServiceReference8.Create request)
         {
             return base.Channel.CreateAsync(request);
         }
         
-        public ServiceReference5.CreateMultiple_Result CreateMultiple(ServiceReference5.CreateMultiple request)
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiceReference8.CreateMultiple_Result ServiceReference8.LoanApplicationList_Port.CreateMultiple(ServiceReference8.CreateMultiple request)
         {
             return base.Channel.CreateMultiple(request);
         }
         
-        public System.Threading.Tasks.Task<ServiceReference5.CreateMultiple_Result> CreateMultipleAsync(ServiceReference5.CreateMultiple request)
+        public void CreateMultiple(ref ServiceReference8.LoanApplicationList[] LoanApplicationList_List)
+        {
+            ServiceReference8.CreateMultiple inValue = new ServiceReference8.CreateMultiple();
+            inValue.LoanApplicationList_List = LoanApplicationList_List;
+            ServiceReference8.CreateMultiple_Result retVal = ((ServiceReference8.LoanApplicationList_Port)(this)).CreateMultiple(inValue);
+            LoanApplicationList_List = retVal.LoanApplicationList_List;
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference8.CreateMultiple_Result> CreateMultipleAsync(ServiceReference8.CreateMultiple request)
         {
             return base.Channel.CreateMultipleAsync(request);
         }
         
-        public ServiceReference5.Update_Result Update(ServiceReference5.Update request)
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiceReference8.Update_Result ServiceReference8.LoanApplicationList_Port.Update(ServiceReference8.Update request)
         {
             return base.Channel.Update(request);
         }
         
-        public System.Threading.Tasks.Task<ServiceReference5.Update_Result> UpdateAsync(ServiceReference5.Update request)
+        public void Update(ref ServiceReference8.LoanApplicationList LoanApplicationList)
+        {
+            ServiceReference8.Update inValue = new ServiceReference8.Update();
+            inValue.LoanApplicationList = LoanApplicationList;
+            ServiceReference8.Update_Result retVal = ((ServiceReference8.LoanApplicationList_Port)(this)).Update(inValue);
+            LoanApplicationList = retVal.LoanApplicationList;
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference8.Update_Result> UpdateAsync(ServiceReference8.Update request)
         {
             return base.Channel.UpdateAsync(request);
         }
         
-        public ServiceReference5.UpdateMultiple_Result UpdateMultiple(ServiceReference5.UpdateMultiple request)
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ServiceReference8.UpdateMultiple_Result ServiceReference8.LoanApplicationList_Port.UpdateMultiple(ServiceReference8.UpdateMultiple request)
         {
             return base.Channel.UpdateMultiple(request);
         }
         
-        public System.Threading.Tasks.Task<ServiceReference5.UpdateMultiple_Result> UpdateMultipleAsync(ServiceReference5.UpdateMultiple request)
+        public void UpdateMultiple(ref ServiceReference8.LoanApplicationList[] LoanApplicationList_List)
+        {
+            ServiceReference8.UpdateMultiple inValue = new ServiceReference8.UpdateMultiple();
+            inValue.LoanApplicationList_List = LoanApplicationList_List;
+            ServiceReference8.UpdateMultiple_Result retVal = ((ServiceReference8.LoanApplicationList_Port)(this)).UpdateMultiple(inValue);
+            LoanApplicationList_List = retVal.LoanApplicationList_List;
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference8.UpdateMultiple_Result> UpdateMultipleAsync(ServiceReference8.UpdateMultiple request)
         {
             return base.Channel.UpdateMultipleAsync(request);
         }

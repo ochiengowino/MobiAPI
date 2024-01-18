@@ -362,3 +362,6 @@ C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\runtimes\win\lib\net6.0\Syste
 C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\Connected Services\ServiceReference4\ConnectedService.json
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\Connected Services\ServiceReference5\ConnectedService.json
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\Connected Services\ServiceReference6\ConnectedService.json
+C:\Users\LYN\source\repos\MobiAPI\bin\Debug\net6.0\Connected Services\ServiceReference7\ConnectedService.json

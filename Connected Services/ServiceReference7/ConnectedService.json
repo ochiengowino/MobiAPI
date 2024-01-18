@@ -1,18 +1,15 @@
 {
   "ExtendedData": {
     "inputs": [
-      "http://ochiengowino:3332/CapitalSaccoInstance/WS/CAPITAL SACCO/Page/LoanApplicationList"
+      "http://OchiengOwino:3332/CapitalSaccoInstance/WS/CAPITAL%20SACCO/Page/LocationList"
     ],
     "collectionTypes": [
       "System.Array",
       "System.Collections.Generic.Dictionary`2"
     ],
-    "internalTypeAccess": true,
-    "messageContract": true,
     "namespaceMappings": [
-      "*, ServiceReference5"
+      "*, ServiceReference7"
     ],
-    "sync": true,
     "targetFramework": "net6.0",
     "typeReuseMode": "All"
   }
